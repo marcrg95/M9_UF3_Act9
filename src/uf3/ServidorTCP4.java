@@ -9,9 +9,7 @@ import java.net.Socket;
 
 
 public class ServidorTCP4 {
-
-	private static int i;
-
+	
 	static class Connexio implements Runnable {
 		private Socket clientConnectat;
 		private BufferedReader fentrada;
@@ -31,7 +29,6 @@ public class ServidorTCP4 {
 			try {
 				fsortida = new PrintWriter(clientConnectat.getOutputStream(), true);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
@@ -48,7 +45,6 @@ public class ServidorTCP4 {
 				fsortida.close();
 				clientConnectat.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
@@ -62,8 +58,6 @@ public class ServidorTCP4 {
 		ServerSocket servidor = new ServerSocket(numPort);
 		while (true) {
 
-			String cadena = "";
-			i++;
 			System.out.println("Esperant connexió... ");
 			Socket clientConnectat = servidor.accept();
 			System.out.println("Client connectat... ");
