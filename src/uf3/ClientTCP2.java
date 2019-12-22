@@ -85,7 +85,7 @@ public class ClientTCP2 {
 
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("Itrodueix un nom:");
+		System.out.println("Introdueix un nom d'usuari:");
 		String nom = scan.next();
 
 		String host = "localhost";
